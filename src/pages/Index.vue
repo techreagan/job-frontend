@@ -1,6 +1,6 @@
 <template>
   <q-page class="container">
-    <main class="container q-mt-xl">
+    <main class="q-mt-xl">
       <div class="row q-col-gutter-md">
         <div v-if="errored">errored</div>
         <template v-else-if="loading">
@@ -18,6 +18,9 @@
               </q-card-actions>
             </q-card>
           </div>
+        </template>
+        <template v-else-if="!jobs.jobs">
+          <p class="q-my-lg">No job posted yet</p>
         </template>
         <template v-else>
           <div

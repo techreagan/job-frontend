@@ -8,7 +8,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-page-container class="q-layout-padding">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
