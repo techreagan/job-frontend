@@ -10,6 +10,14 @@
 const ESLintPlugin = require("eslint-webpack-plugin");
 const { configure } = require("quasar/wrappers");
 
+const DotEnv = require("dotenv");
+
+if ((parsedEnv = DotEnv.config().parsed)) {
+  for (let key in parsedEnv) {
+    process.env[key] = parsedEnv[key];
+  }
+}
+
 module.exports = configure(function (ctx) {
   return {
     // https://quasar.dev/quasar-cli/supporting-ts
