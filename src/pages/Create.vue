@@ -6,7 +6,7 @@
       color="primary"
       round
       icon="chevron_left"
-      @click="router.back(-1)"
+      to="/"
     />
     <h1 class="text-h5 text-weight-bold" style="margin-bottom: 2rem">
       Create Job

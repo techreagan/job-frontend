@@ -21,7 +21,13 @@
 
         <template v-else>
           <div class="q-mb-md">
-            <q-btn color="primary" round icon="chevron_left" to="/" />
+            <q-btn
+              unelevated
+              color="primary"
+              round
+              icon="chevron_left"
+              to="/"
+            />
           </div>
           <q-card class="my-card full-width" flat>
             <q-card-section>
