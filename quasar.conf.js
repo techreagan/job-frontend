@@ -15,6 +15,7 @@ const DotEnv = require("dotenv");
 if ((parsedEnv = DotEnv.config().parsed)) {
   for (let key in parsedEnv) {
     process.env[key] = parsedEnv[key];
+    console.log(parsedEnv);
   }
 }
 
@@ -51,7 +52,10 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       vueRouterMode: "history", // available values: 'hash', 'history'
-      env: require("dotenv").config().parsed,
+      // env: require("dotenv").config().parsed,
+      env: {
+        API_URL: ctx.dev ? process.env.API_URL : process.env.API_URL,
+      },
       // transpile: false,
       // publicPath: '/',
 
