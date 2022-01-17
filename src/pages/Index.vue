@@ -19,7 +19,7 @@
             </q-card>
           </div>
         </template>
-        <template v-else-if="!jobs.jobs">
+        <template v-else-if="jobs.jobs.length === 0">
           <p class="q-my-lg">No job posted yet</p>
         </template>
         <template v-else>
