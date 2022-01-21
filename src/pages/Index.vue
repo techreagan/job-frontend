@@ -84,12 +84,9 @@ async function getJobs() {
     }
   );
 
-  console.log(data);
-
   loading.value = false;
 
   jobs.value = data.data.data;
-  console.log(jobs.value);
 }
 
 getJobs();

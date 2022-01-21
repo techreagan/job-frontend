@@ -15,7 +15,7 @@ const DotEnv = require("dotenv");
 if ((parsedEnv = DotEnv.config().parsed)) {
   for (let key in parsedEnv) {
     process.env[key] = parsedEnv[key];
-    console.log(parsedEnv);
+    // console.log(parsedEnv);
   }
 }
 

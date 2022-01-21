@@ -216,7 +216,7 @@ countries.value = countriesData.map((data) => data.name);
 const { triggerNotification } = useNotify();
 
 const schema = yup.object({
-  title: yup.string().min(3).required(),
+  title: yup.string().min(5).required(),
   // description: yup.string().min(10).required(),
   type: yup.string().required(),
   country: yup.string().required(),
@@ -225,7 +225,7 @@ const schema = yup.object({
 async function onSubmit(values, actions) {
   loading.value = true;
   error.isError = false;
-  console.log(values);
+
   const data = await JobService.createJob({
     ...values,
     type: values.type.toLowerCase(),
